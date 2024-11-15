@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence xmlns="http://java.sun.com/xml/ns/persistence" version="2.0">
+    <persistence-unit name="jdbc-postgres">
+        <provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
+        <class>ir.maktabsharif.model.StudentEntity</class>
+        <class>ir.maktabsharif.model.TeacherEntity</class>
+        <class>ir.maktabsharif.model.ExamEntity</class>
+        <class>ir.maktabsharif.model.CourseEntity</class>
+        <class>ir.maktabsharif.model.BaseEntity</class>
+        <class>ir.maktabsharif.model.Users</class>
+        <class>ir.maktabsharif.model.Address</class>
+
+        <properties>
+            <property name="javax.persistence.jdbc.url" value="jdbc:postgresql://localhost:5432/maktabsharif"/>
+            <property name="javax.persistence.jdbc.user" value="postgres"/>
+            <property name="javax.persistence.jdbc.password" value="3475"/>
+            <property name="hibernate.dialect" value="org.hibernate.dialect.PostgreSQLDialect"/>
+            <property name="javax.persistence.jdbc.driver" value="org.postgresql.Driver"/>
+            <property name="hibernate.hbm2ddl.auto" value="update"/>
+            <property name="hibernate.show_sql" value="false"/>
+        </properties>
+
+    </persistence-unit>
+</persistence>
